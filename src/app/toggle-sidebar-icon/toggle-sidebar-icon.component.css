@@ -1,0 +1,13 @@
+  
+  .hamburger_icon {
+    fill: none;
+    stroke: #EABDA8;
+    stroke-linecap: round;
+    stroke-width: 20;
+    height: 1rem;
+    cursor: pointer;
+    order: 1;
+    padding-left: 40px;
+  }
+  
+  

@@ -1,0 +1,91 @@
+:host {
+  display: none;
+}
+
+:host.is-open {
+  display: block;
+}
+
+.side-menu {
+  position: fixed;
+  left: 0;
+  top: 4.5rem;
+  box-sizing: border-box;
+  width: 400px;
+  height: 100%;
+  padding: 20px 10px;
+  background: #ccc;
+  max-width: 26rem;
+  background-color: #FAF9F8;
+  box-shadow: 0 0 2rem #5D5755;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 2fr 4fr 1fr;
+  grid-gap: 1rem;
+}
+
+.menu-header {
+  background: linear-gradient(to right, #f0edec, #d3e2e0);
+  display: grid;
+  grid-template-rows: 1fr 4fr;
+  grid-template-columns: 1fr 4fr;
+  /* grid-template-areas can be confusing: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas */
+  grid-template-areas: "welcome-text welcome-text" "image details"; 
+  box-sizing: border-box;
+  width: 100%;
+  align-content: center;
+  color: #493843;
+  box-shadow: 0 0.5rem 2rem #49514C;
+}
+
+.welcome_text {
+  grid-area: welcome-text;
+  font-size: 1.25rem;
+  letter-spacing: 0.15rem;
+  text-transform: uppercase;
+  margin-top: 1rem;
+  justify-self: center;
+  align-self: center;
+}
+
+.account-details {
+  grid-area: details;
+  display: flex;
+  flex-flow: column;
+  margin-left: 1rem;
+  align-self: center;
+}
+
+.name_text {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+}
+
+.email_text {
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
+}
+
+.menu-body {
+  display: grid;
+  width: 100%;
+}
+
+.profile-image_container {
+  grid-area: image;
+  margin-right: 0.5rem;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  align-self: center;
+  margin-left: 2rem;
+}
+
+.profile_image {
+  max-width: 4rem;
+}
