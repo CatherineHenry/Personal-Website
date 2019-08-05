@@ -1,0 +1,42 @@
+
+:host {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+  .about_text {
+    display: flex;
+    justify-content: center;
+    grid-area: about-text;
+    padding: 40px;
+    font-size: 1.02rem;
+    letter-spacing: 0.1rem;
+  }
+  
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    width: 70%;
+    height: 50%;
+    background: linear-gradient(to right, #f0edec, #d3e2e0);
+    display: grid;
+    grid-template-rows: 0fr 0fr 4fr;
+    grid-template-columns: 1fr 4fr;
+    /* grid-template-areas can be confusing: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas */
+    grid-template-areas: "welcome-text welcome-text" "about-text about-text" "image details"; 
+    box-sizing: border-box;
+    align-content: center;
+    color: #594A54;
+  }
+  
+  /* make card wider on phones. extra edge space is arbitrary then*/
+@media only screen and (max-width: 530px) {
+    .card {
+        width: 90%;
+        height: 70%;
+    }
+}

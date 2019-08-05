@@ -1,39 +1,52 @@
 .main_header_container {
-    width: 100%;
-    display: flex;
-    left: 0;
-    position: absolute;
-    height: 4rem;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #493843;
-  }
-  
-  .date_text {
-    text-transform: uppercase;
-    letter-spacing: 0.1rem;
-    order: 3;
-    color: #EABDA8;
-    padding-right: 40px;
-    font-size: 1rem;
-  
-  }
-  
-  /*SVGs*/
-  .logo_icon {
-    fill: none;
-    stroke: #BCB6BA;
-    stroke-width: 25px;
-    height: 2.5rem;
-    order: 2;
-  }
-  
+  margin:0;
+  padding: 0;
+  width: 100%;
+  display: flex;
+  left: 0;
+  /* position: absolute; */
+  height: 4rem;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #493843;
+}
+
+.date_text {
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  order: 3;
+  color: #eabda8;
+  padding-right: 40px;
+  font-size: 1rem;
+}
+
+/*SVGs*/
+.logo_icon {
+  fill: none;
+  stroke: #bcb6ba;
+  stroke-width: 25px;
+  height: 2.5rem;
+  order: 2;
+  width: 170px;
+}
+
+.logo_text {
+  fill: #bcb6ba;
+  stroke: #bcb6ba;
+  padding-left: 0.2rem;
+  font-family: Consolas, Arial;
+  stroke-width: 3px;
+  font-size: 13rem;
+  letter-spacing: 0.03em;
+}
+
+/* on phones only show the CH part of the logo and adjust width accordingly */
+@media only screen and (max-width: 530px) {
   .logo_text {
-    fill: #BCB6BA;
-    stroke: #BCB6BA;
-    padding-left: 0.2rem;
-    font-family: Consolas, Arial;
-    stroke-width: 3px;
-    font-size: 13rem;
-    letter-spacing: 0.03em;  
+    display: none;
   }
+  .logo_icon {
+
+    width: 30px;
+  }
+}

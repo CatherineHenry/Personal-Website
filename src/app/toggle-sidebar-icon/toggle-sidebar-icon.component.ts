@@ -16,5 +16,4 @@ export class ToggleSidebarIconComponent {
     this.SidebarService.toggle();
   }
 
-
 }

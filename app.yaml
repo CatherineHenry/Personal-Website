@@ -1,0 +1,52 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+skip_files:
+- ^(?!dist)  # Skip any files not in the dist folder
+handlers:
+# these top two are required to handle google app engines routing 
+# https://stackoverflow.com/questions/41986100/angular-2-google-app-engine-set-base-href-reloading-child-routes-fails-serv
+- url: /(.*\.(js|map|css|png))$
+  static_files: dist/\1
+  upload: dist/.*\.(js|map|css|png)$
+
+- url: .*
+  static_files: dist/index.html
+  upload: dist/index.html
+  
+- url: /(.+\.js)
+  static_files: dist/\1
+  upload: dist/(.+\.js)
+
+- url: /(.+\.css)
+  static_files: dist/\1
+  upload: dist/(.+\.css)
+
+- url: /(.+\.png)
+  static_files: dist/\1
+  upload: dist/(.+\.png)
+
+- url: /(.+\.jpg)
+  static_files: dist/\1
+  upload: dist/(.+\.jpg)
+
+- url: /(.+\.svg)
+  static_files: dist/\1
+  upload: dist/(.+\.svg)
+
+- url: /favicon.ico
+  static_files: dist/assets/favicon.ico
+  upload: dist/assets/favicon.ico
+
+- url: /(.+\.json)
+  static_files: dist/\1
+  upload: dist/(.+\.json)
+
+- url: /(.+)
+  static_files: dist/index.html
+  upload: dist/index.html
+
+- url: /
+  static_files: dist/index.html
+  upload: dist/index.html

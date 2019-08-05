@@ -1,4 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { DataService } from '../data.service';
 
 @Component({
   selector: 'app-header',
@@ -7,6 +10,12 @@ import { Component, EventEmitter, Output } from '@angular/core';
 })
 export class HeaderComponent {
 
-  constructor() { }
+  public date = "";
 
+  constructor(private dataService:DataService){
+    this.dataService.get_date().subscribe((res: string)=>{
+   console.log("response: " + res);
+      this.date = res["date"];
+    })
+  }
 }

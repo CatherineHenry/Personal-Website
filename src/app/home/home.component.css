@@ -1,0 +1,92 @@
+
+:host {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    font-size: 1.25rem;
+    font-weight: bold; 
+    letter-spacing: 0.15rem;
+    text-transform: uppercase;
+    margin-top: 1rem;
+  }
+  
+
+  .welcome_title {
+    grid-area: welcome-text;
+    padding: 40px;
+  }
+  
+  .details {
+    grid-area: details;
+    display: flex;
+    flex-flow: column;
+    align-self: center;
+  }
+  
+  .name_text {
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .email_text {
+    font-size: 0.9rem;
+    letter-spacing: 0.1rem;
+  }
+  
+    
+  .about_text {
+    grid-area: about-text;
+    padding: 40px;
+    font-size: 1.02rem;
+    letter-spacing: 0.1rem;
+    max-width: 100%;
+  }
+  
+
+  .profile-image_container {
+    grid-area: image;
+    margin-right: 0.5rem;
+    border-radius: 50%;
+    height: 4rem;
+    width: 4rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    align-self: center;
+    margin-left: 2rem;
+  }
+  
+  .profile_image {
+    max-width: 4rem;
+  }
+
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    border-radius: 5px; /* 5px rounded corners */
+    width: 70%;
+    height: 50%;
+    background: linear-gradient(to right, #f0edec, #d3e2e0);
+    display: grid;
+    grid-template-rows: 0fr 0fr 4fr;
+    grid-template-columns: 1fr 4fr;
+    /* grid-template-areas can be confusing: https://developer.mozilla.org/en-US/docs/Web/CSS/grid-template-areas */
+    grid-template-areas: "welcome-text welcome-text" "about-text about-text" "image details"; 
+    box-sizing: border-box;
+    align-content: center;
+    color: #594A54;
+  }
+  
+/* make card wider on phones. extra edge space is arbitrary then*/
+@media only screen and (max-width: 530px) {
+    .card {
+        width: 90%;
+        height: 70%;
+    }
+}

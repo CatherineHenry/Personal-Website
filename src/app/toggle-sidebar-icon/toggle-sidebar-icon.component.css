@@ -1,13 +1,19 @@
-  
-  .hamburger_icon {
-    fill: none;
-    stroke: #EABDA8;
-    stroke-linecap: round;
-    stroke-width: 20;
-    height: 1rem;
-    cursor: pointer;
-    order: 1;
-    padding-left: 40px;
-  }
-  
-  
+.hamburger_icon {
+  fill: none;
+  stroke: #eabda8;
+  stroke-linecap: round;
+  stroke-width: 20;
+  height: 1.1rem;
+  cursor: pointer;
+  order: 1;
+  padding-left: 40px;
+  width: 50px;
+  padding-top: 0.5rem;
+  transition: 0.3s;
+}
+
+/* When you mouse over the hamburger icon change it's color */
+.hamburger_icon:hover {
+  stroke: #fbf3ef;
+}
+
